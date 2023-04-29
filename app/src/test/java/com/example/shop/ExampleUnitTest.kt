@@ -1,6 +1,7 @@
 package com.example.shop
 
 import org.junit.Test
+import com.example.shop.formatDouble
 
 import org.junit.Assert.*
 
@@ -18,5 +19,10 @@ class ExampleUnitTest {
     @Test
     fun addition_print_hello() {
         print("hello")
+    }
+
+    @Test
+    fun use_format() {
+        println(formatDouble(3.14159))
     }
 }
