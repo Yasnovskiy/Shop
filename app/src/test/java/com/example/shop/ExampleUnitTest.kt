@@ -2,6 +2,7 @@ package com.example.shop
 
 import org.junit.Test
 import com.example.shop.formatDouble
+import com.example.shop.Product
 
 import org.junit.Assert.*
 
@@ -22,7 +23,10 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun use_format() {
-        println(formatDouble(3.14159))
+    fun example() {
+        val iphoneCase = Product(price = 123.5)
+        val priceFormatter: PriceFormatter = MyPriceFormatter()
+        val discountIphoneCasePrice = iphoneCase.calcDiscountPrice()
+        println(priceFormatter.format(discountIphoneCasePrice))
     }
 }
